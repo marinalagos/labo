@@ -510,10 +510,13 @@ drift_rank_cero_fijo  <- function( campos_drift )
 
 #cargo el dataset donde voy a entrenar
 #esta en la carpeta del exp_input y siempre se llama  dataset.csv.gz
+setwd( "~/buckets/b1/" )
 dataset_input  <- paste0( "./exp/", PARAM$exp_input, "/dataset.csv.gz" )
+####dataset_input  <-  "/home/mlmarinalagos/buckets/b1/exp/CA9070/dataset.csv.gz" 
 dataset  <- fread( dataset_input )
 
 #creo la carpeta donde va el experimento
+setwd( "~/buckets/b1/" )
 dir.create( paste0( "./exp/", PARAM$experimento, "/"), showWarnings = FALSE )
 setwd(paste0( "./exp/", PARAM$experimento, "/"))   #Establezco el Working Directory DEL EXPERIMENTO
 
