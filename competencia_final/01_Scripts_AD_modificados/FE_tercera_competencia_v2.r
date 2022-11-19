@@ -509,6 +509,7 @@ drift_rank_cero_fijo  <- function( campos_drift )
 
 #cargo el dataset donde voy a entrenar
 #esta en la carpeta del exp_input y siempre se llama  dataset.csv.gz
+setwd( "~/buckets/b1/" )
 dataset_input  <- paste0( "./exp/", PARAM$exp_input, "/dataset_reparado.csv.gz" )
 dataset  <- fread( dataset_input )
 
