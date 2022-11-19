@@ -28,6 +28,9 @@ semillas <- c(732497,
 # Cargamos el dataset
 dataset <- fread("./datasets/competenciaFINAL_2022.csv.gz")
 
+# Cargamos el dataset de probabilidades
+ds_probas <- fread("./datasets/df_probas.csv")
+
 #### Analisis descriptivo de fechas
 
 print(colnames(dataset))
@@ -440,6 +443,11 @@ AgregarVariables  <- function( dataset )
   }
 
 }
+
+#------------------------------------------------------------------------------
+#Agregar columna de probabilidad
+dataset <- merge(dataset, df_probas, by = c('numero_de_cliente', 'foto_mes'))
+
 #------------------------------------------------------------------------------
 #deflaciona por IPC
 #momento 1.0  31-dic-2020 a las 23:59
@@ -575,7 +583,7 @@ require("lightgbm")
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento <- "FE9260"
+PARAM$experimento <- "FE9270"
 
 PARAM$exp_input  <- "DR9151"
 
@@ -966,6 +974,6 @@ if( PARAM$CanaritosAsesinos )
 #------------------------------------------------------------------------------
 #grabo el dataset
 fwrite( dataset,
-        "dataset.csv.gz",
+        "dataset_con_probas.csv.gz",
         logical01= TRUE,
         sep= "," )
