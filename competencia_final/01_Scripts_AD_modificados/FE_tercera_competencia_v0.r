@@ -974,6 +974,6 @@ if( PARAM$CanaritosAsesinos )
 #------------------------------------------------------------------------------
 #grabo el dataset
 fwrite( dataset,
-        "dataset_con_probas.csv.gz",
+        "dataset.csv.gz",
         logical01= TRUE,
         sep= "," )
