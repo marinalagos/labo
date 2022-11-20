@@ -18,9 +18,9 @@ semillas <- c(732497,
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento <- "TS9340_PROBA"
+PARAM$experimento <- "TS9341_PROBA"
 
-PARAM$exp_input  <- "FE9270"
+PARAM$exp_input  <- "FE9272"
 
 PARAM$future       <- c( 202109 )
 
@@ -60,7 +60,7 @@ setwd( "~/buckets/b1/" )
 
 #cargo el dataset donde voy a entrenar
 #esta en la carpeta del exp_input y siempre se llama  dataset.csv.gz
-dataset_input  <- paste0( "./exp/", PARAM$exp_input, "/dataset.csv.gz" )
+dataset_input  <- paste0( "./exp/", PARAM$exp_input, "/dataset_PROBA_conFE.csv.gz" )
 dataset  <- fread( dataset_input )
 
 
