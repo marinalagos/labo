@@ -92,7 +92,7 @@ variables_drift_pesos <- c("mrentabilidad","mrentabilidad_annual","mcomisiones",
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento  <- "CA9071"
+PARAM$experimento  <- "CA9072"
 PARAM$dataset  <- "./datasets/competenciaFINAL_2022_PROBA.csv.gz"
 
 PARAM$metodo  <- "MachineLearning"     #valores posibles  "MachineLearning"  "EstadisticaClasica"
@@ -328,9 +328,9 @@ fwrite( dataset,
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento  <- "DR9152"
+PARAM$experimento  <- "DR9153"
 
-PARAM$exp_input  <- "CA9071"
+PARAM$exp_input  <- "CA9072"
 
 #valores posibles  "ninguno" "rank_simple" , "rank_cero_fijo" , "deflacion"
 PARAM$metodo  <- "rank_cero_fijo"
@@ -574,9 +574,9 @@ require("lightgbm")
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento <- "FE9272"
+PARAM$experimento <- "FE9273"
 
-PARAM$exp_input  <- "DR9152"
+PARAM$exp_input  <- "DR9153"
 
 PARAM$lag1  <- TRUE
 PARAM$lag2  <- TRUE
