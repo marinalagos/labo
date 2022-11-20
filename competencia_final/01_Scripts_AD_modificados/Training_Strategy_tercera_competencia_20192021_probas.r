@@ -20,7 +20,7 @@ semillas <- c(732497,
 PARAM  <- list()
 PARAM$experimento <- "TS9341_PROBA"
 
-PARAM$exp_input  <- "FE9272"
+PARAM$exp_input  <- "FE9271"
 
 PARAM$future       <- c( 202109 )
 
