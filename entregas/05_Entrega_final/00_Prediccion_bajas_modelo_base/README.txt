@@ -1,0 +1,1 @@
+Los códigos b_ y c_ es necesario correrlos varias veces para los distintos meses. Para eso se deben ir comentando y descomentando algunas líneas.
